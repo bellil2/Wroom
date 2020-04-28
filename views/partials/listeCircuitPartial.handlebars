@@ -1,0 +1,10 @@
+<table class="tabpayscir">
+    {{#each listeCircuit}}
+        <tr>
+            <td><img style="width: 35px; height: auto;" src="/image/pays/{{this.PAYADRDRAP}}" alt="imageDrapeau" />
+                <a href="/detailsCircuit/{{this.CIRNUM}}">{{this.CIRNOM}}</a>
+            </td>
+        </tr>
+    {{/each}}
+</table>
+<br class="myboth" />

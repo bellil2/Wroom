@@ -1,0 +1,20 @@
+<h1>Ajouter un sponsor</h1>
+
+<form method="POST" action="ajouterSponsorPost">
+    <label for="nom">Nom</label>
+    <input required name="SPONOM" type="text">
+
+    <label for="longueur">Secteur d'activité</label>
+    <input required name="SPOSECTACTIVITE" type="text">
+
+    <label for="ecurie">Ecurie sponsorisé</label>
+    <select name="ECUNUM" >
+        <option value="0">Aucune</option>
+        {{#each listeEcurie}}
+            <option value="{{this.ECUNUM}}">{{this.ECUNOM}}</option>
+        {{/each}}
+    </select>
+
+    <span></span>
+    <input type="submit" value="AJOUTER" id="butt">
+</form>

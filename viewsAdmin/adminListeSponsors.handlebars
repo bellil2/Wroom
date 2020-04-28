@@ -1,0 +1,24 @@
+<div id="PartHa">
+  <img src="/image/cat_sponsor.png" alt="modif">
+  <h1> {{title}}</h1>
+  <img src="/image/act_add.png" alt="modif">
+  <a href="/ajouterSponsor"> Ajouter un sponsor</a>
+
+  <table>
+    <tr>
+      <th>Nom</th>
+      <th>Activite</th>
+      <th>Actions</th>
+    </tr>
+    {{#each listeSponsor}}
+    <tr>
+      <td>{{this.SPONOM}}</td>
+      <td>{{this.SPOSECTACTIVITE}}</td>
+      <td>
+        <img src="/image/act_delete.png" alt="modif">
+        <a href="/supprimerSponsor/{{this.SPONUM}}"> Supprimer</a>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+</div>

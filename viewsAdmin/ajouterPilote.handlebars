@@ -1,0 +1,33 @@
+<h1>Ajouter un pilote</h1>
+
+<form action="/ajouterPilotePost" method="post" enctype="multipart/form-data">
+  Prénom : <input required type="text" name="PILPRENOM" value="Mehdi">
+  Nom : <input required type="text" name="PILNOM" value="Bellil">
+  Date de naissance : <input required type="date" name="PILDATENAIS" value="2000-12-30">
+  Nationalité : <select size="1" name="PAYNUM" />
+
+  {{#each pays}}
+  <option value="{{this.PAYNUM}}"> {{this.PAYNOM}}
+  </option>
+  {{/each}}
+  </select>
+
+  ecurie : <select size="1" name="ECUNUM" />
+  {{#each listeEcurie}}
+  <option value="{{this.ECUNUM }}"> {{this.ECUNOM}}
+  </option>
+  {{/each}}
+
+  </select>
+  Points : <input required type="text" name="PILPOINTS" value="5">
+  Poids : <input required type="text" name="PILPOIDS" value="85">
+  Taille : <input required type="number" name="PILTAILLE" value="190">
+  Description : <textarea cols="40" rows="5"
+    name="PILTEXTE">ajouter texte.. </textarea>
+  <input required type="file" name="PHOADRESSE" />
+
+  <span></span>
+  <span></span>
+  <input id="butt" type="submit" value="AJOUTER" />
+
+</form>

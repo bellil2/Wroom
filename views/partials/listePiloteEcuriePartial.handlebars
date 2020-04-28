@@ -1,0 +1,19 @@
+<p>Pilotes : </p>
+{{#each listePilotesEcurie}}
+<div class="tooltip" id="PartHa2">
+  <a href="/detailsPilote/{{this.PILNUM}}" id="pilote" class="tooltip">
+    <p>
+      {{this.PILPRENOM}}
+      {{this.PILNOM}}
+    </p>
+  </a>
+  
+  <span class="tooltiptext">
+    <img src="/image/pilote/{{this.PHOADRESSE}}" alt="imagePilote" id="picProf">
+    {{this.PILNOM}}
+    {{this.PILPRENOM}} <br>
+    {{this.PILTEXTE}} ...
+  </span>
+</div>
+{{/each}}
+<br>

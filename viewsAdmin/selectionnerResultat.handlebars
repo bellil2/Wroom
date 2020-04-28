@@ -1,0 +1,20 @@
+<div id="PartHa">
+
+    <h1>{{title}}</h1>
+    <p>Selectionner un grand prix :</p>
+
+    <table class="tabpayscir">
+        {{#each selectionGrandPrix}}
+        <tr>
+            <td><img style="width: 35px; height: auto;" src="/image/pays/{{this.PAYADRDRAP}}" alt="imageDrapeau" />
+                <p>{{this.GPNOM}}</p>
+            </td>
+            <td>
+                <img src="/image/act_edit.png" alt="modif">
+                <a href="/saisieRESULTATS/{{this.GPNUM}}"> Modifier</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+    <br class="myboth" />
+</div>

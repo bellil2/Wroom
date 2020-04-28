@@ -1,0 +1,16 @@
+<div id="CirPartHaute">
+    <img style="width: auto; height: 200px;" src="/image/circuit/{{detailsCircuit.CIRADRESSEIMAGE}}" alt="imageCircuit" class="CirPartieHaute">
+    
+    <div class="CirPartieHaute" id="CircuitPartHaute">
+        <div><p class="bold">Nom :</p>{{detailsCircuit.CIRNOM}}</div>
+        <div><p class="bold">Longueur : </p>{{detailsCircuit.CIRLONGUEUR}} m</div>
+        <div><p class="bold">Nombre de spectateurs : </p>{{detailsCircuit.CIRNBSPECTATEURS}}</div>
+        <div><p class="bold">Pays : </p>{{detailsCircuit.PAYNOM}}</div>
+    </div>
+
+    <div class="CirPartieHaute" id="CircuitPartB">
+        {{> listeCircuitPartial}}
+    </div>
+</div>
+
+<p>{{detailsCircuit.CIRTEXT}}</p>

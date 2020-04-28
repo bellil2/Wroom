@@ -1,0 +1,10 @@
+<table class="tabpayscir">
+    {{#each listeGrandPrix}}
+        <tr>
+            <td><img style="width: 35px; height: auto;" src="/image/pays/{{this.PAYADRDRAP}}" alt="imageDrapeau" />
+                <a href="/DetailGrandPrix/{{this.GPNUM}}">{{this.GPNOM}}</a>
+            </td>
+        </tr>
+    {{/each}}
+</table>
+<br class="myboth" />

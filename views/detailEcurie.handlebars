@@ -1,0 +1,40 @@
+<div style="display: flex;">
+  <div>
+    <div id="EcuPartA">
+      <img src="/image/ecurie/{{{detailEcurie.ECUADRESSEIMAGE}}} " class="petitEcuPartA" id="picProf">
+
+      <div class="petitEcuPartA">
+        <div>
+          <p class="bold">Nom : </p>{{detailEcurie.ECUNOM}}
+        </div>
+        <div>
+          <p class="bold">Directeur : </p>{{detailEcurie.ECUNOMDIR}}
+        </div>
+        <div>
+          <p class="bold">Adresse : </p>{{detailEcurie.ECUADRSIEGE}}
+        </div>
+        <div>
+          <p class="bold">Pays : </p> {{detailEcurie.PAYNOM}}
+        </div>
+        <div>
+          {{#if detailEcurie.FPNOM}}
+          <p class="bold">Fournisseur de pneumatiques : </p>{{detailEcurie.FPNOM}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+    {{#if listePilotesEcurie }}
+    <div>
+      {{> listePiloteEcuriePartial }}
+      {{> listeVoiturePartial }}
+    </div>
+    {{else}}
+    Cette écurie ne participe pas au championnat cette année
+    {{/if}}
+  </div>
+  
+  <div id="EcuriePartHau">
+    {{> listeEcuriePartial }}
+  </div>
+</div>

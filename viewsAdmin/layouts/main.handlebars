@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>{{title}}</title>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/x-icon" href="/image/favicon.png" />
+
+	<link rel="stylesheet" href="/css/structure.css" />
+	<link href="/css/lightbox.css" rel="stylesheet" />
+</head>
+
+<body class="monBody">
+	<div id="container">
+		<div id="header">
+			<img src="/image/staff_admin.jpg" alt="Menu administration" />
+		</div>
+
+		{{#if session.isConnected}}
+			<div id="menu">
+				<a href="/adminListePilotes">PILOTES</a> |
+				<a href="/circuits">CIRCUITS</a> |
+				<a href="/ecuries">ECURIES</a> |
+				<a href="/RESULTATS">RESULTATS</a> |
+				<a href="/sponsor">SPONSORS</a> |
+				<a href="http://localhost:6800">Retour au site</a>
+			</div>
+		{{/if}}
+
+		<div id="contenu">
+			<br />
+			<br />
+			{{{body}}}
+		</div>
+
+		{{#if session.isConnected}}
+			<div id="footer">
+				L'encyclopédie de la F1 depuis janvier 2020 (en NodeJS)
+				<br />
+				© IUT du Limousin DUT Informatique année 2
+				<br />
+				<br />
+				<br />
+				<img src="/image/nodejs.png" id="LogoNode" alt="Logo NodeJs" title="Logo Node.JS" />
+			</div>
+		{{/if}}
+	</div>
+
+	<script src="/js/lightbox-plus-jquery.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<h1>{{title}}</h1>
+<p>{{infosGp.GPNUM}}</p>
+<div class="partA">
+    <table>
+      <tr>
+          <th>Place</th>
+          <th>Pilote</th>
+          <th>Temps</th>
+          <th>Points</th>
+        </tr>
+      {{#each DetailGrandPrix}}
+        <tr>
+            <td>{{this.row_number}}</td>
+            <td>{{this.PILNOM}} {{this.PILPRENOM}}</td>
+            <td>{{this.TEMPSCOURSE}}</td>
+            <td>{{this.PTNBPOINTSPLACE}}</td>
+            <td>
+                <img src="/image/act_delete.png" alt="modif">
+                <a href="/supprimerLignepartA/{{this.GPNUM}}/{{this.PILNUM}}"> Supprimer</a>
+            </td>
+        </tr>
+      {{/each}}
+      <form action="/ajouterLignepartA" method="post">
+        <tr>
+          <td>
+            {{#each infosGp}}
+              <label> Gpnum : </label>  <input name="GPNUM" value="{{this.GPNUM}}">
+            {{/each}}
+          </td>
+            <td>
+              <select name="PILNUM" >
+                {{#each listePilote}}
+                    <option value="{{this.PILNUM}}">{{this.PILNOM}}</option>
+                {{/each}}
+            </select>
+          </td>
+            <td>
+                <input required type="time" name="TEMPSCOURSE" value="01:32:50" step="2">
+            </td>
+            <td colspan="2">
+              <input type="submit" value="OK" id="butt">
+            </td>
+        </tr>
+      </form>
+    </table>
+</div>

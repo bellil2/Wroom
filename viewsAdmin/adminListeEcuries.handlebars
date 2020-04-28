@@ -1,0 +1,26 @@
+<div id="PartHa">
+  <img src="/image/cat_ecurie.png" alt="ImageDeDrapeau">
+  <h1>{{title}}</h1>
+  <img src="/image/act_add.png" alt="modif">
+  <a href="/ajouterEcurie"> Ajouter une écurie</a>
+
+  <table>
+    <tr>
+      <th>Nom</th>
+      <th>Directeur</th>
+      <th>Points</th>
+      <th>Actions</th>
+    </tr>
+    {{#each listeEcurie}}
+    <tr>
+      <td>{{this.ECUNOM}}</td>
+      <td>{{this.ECUNOMDIR}} m</td>
+      <td>{{this.ECUPOINTS}}</td>
+      <td>
+        <img src="/image/act_delete.png" alt="modif">
+        <a href="/supprimerEcurie/{{this.ECUNUM}}"> Supprimer</a>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+</div>

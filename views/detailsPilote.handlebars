@@ -1,0 +1,41 @@
+{{> nomPilotePartial}}
+
+<div id="ProfPartA">
+    <img src="/image/pilote/{{detailsPilote.PHOADRESSE}}" alt="imagePilote" id="picProf" class="PilPartA">
+
+    <div class="PilPartA">
+        <p>Nom : {{detailsPilote.PILPRENOM}} {{detailsPilote.PILNOM}}</p>
+        <p>Date de naissance : {{formatDate vip.VIP_NAISSANCE 'DD MMMM YYYY' }}</p>
+        <p>Nationalité : {{detailsPilote.PAYNAT}}</p>
+        <p>Ecurie :
+        {{#if detailsPilote.ECUNOM}}
+            {{detailsPilote.ECUNOM}}</p>
+        {{else}}
+            Pas d'écurie cette année</p>
+        {{/if}}
+    </div>
+    
+    <div class="PilPartA" id="PartB">
+        <p>Poids : {{detailsPilote.PILPOIDS}} Kg</p>
+        <p>Taille : {{detailsPilote.PILTAILLE}} Cm</p>
+    </div>
+</div>
+
+{{#if sponsoPilote}}
+    <p>Principaux sponsors :</p>
+    <p>
+    {{#each sponsoPilote}}
+        {{this.SPONOM}} ({{this.SPOSECTACTIVITE}})<br/>
+    {{/each}}
+    </p>
+{{/if}}
+
+<p>Qui suis-je ? : {{detailsPilote.PILTEXTE}}</p>
+
+{{#each photosPilote}}
+    <a
+        href="/image/pilote/{{this.PHOADRESSE}}"
+        data-lightbox="imagepilote-set" data-title="{{this.PHOSUJET}} {{this.PHOCOMMENTAIRE}}">
+        <img style="width: 200px; height: auto;" src="/image/pilote/{{this.PHOADRESSE}}" alt="imagePilote">
+    </a>
+{{/each}}

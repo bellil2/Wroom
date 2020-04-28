@@ -1,0 +1,26 @@
+<div id="PartHa">
+  <img src="/image/cat_pilote.png" alt="modif" >
+  <h1>{{title}}</h1>
+  <img src="/image/act_add.png" alt="modif">
+  <a href="/ajouterPilote"> Ajouter un pilote</a>
+
+  <table>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Date de naissance</th>
+        <th>Actions</th>
+      </tr>
+    {{#each listeAllPilotes}}
+      <tr>
+          <td>{{this.PILNOM}}</td>
+          <td>{{this.PILPRENOM}}</td>
+          <td>{{formatDate this.PILDATENAIS 'DD MMMM YYYY'}} </td>
+          <td>
+              <img src="/image/act_delete.png" alt="modif">
+              <a href="/supprimerPilote/{{this.PILNUM}}"> Supprimer</a>
+          </td>
+      </tr>
+    {{/each}}
+  </table>
+</div>

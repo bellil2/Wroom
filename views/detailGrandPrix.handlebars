@@ -1,0 +1,28 @@
+<div style="display: flex;">
+  <div class="partA">
+      <table>
+        <tr>
+            <th>Place</th>
+            <th>Pilote</th>
+            <th>Temps</th>
+            <th>Points</th>
+          </tr>
+        {{#each DetailGrandPrix}}
+          <tr>
+              <td>{{this.row_number}}</td>
+              <td>{{this.PILNOM}} {{this.PILPRENOM}}</td>
+              <td>{{this.TEMPSCOURSE}}</td>
+              <td>{{this.PTNBPOINTSPLACE}}</td>
+          </tr>
+        {{/each}}
+      </table>
+  </div>
+  
+  <div style="flex: 1;">
+    {{> listeGrandPrixPartial}}
+  </div>
+</div>
+
+
+<p>{{infoGrandPrix.GPCOMMENTAIRE}}</p>
+

@@ -1,0 +1,28 @@
+{
+    "name": "GrandPrixNodeJS",
+    "description": "Un exemple Express.js application utilisant MVC Template",
+    "private": true,
+    "version": "0.1.4",
+    "dependencies": {
+        "async": "^3.2.0",
+        "body-parser": "^1.19.0",
+        "cookie-parser": "^1.4.5",
+        "cryptr": "^6.0.2",
+        "express": "^4.17.1",
+        "express-fileupload": "^1.1.6",
+        "express-handlebars": "^3.1.0",
+        "express-session": "~1.17",
+        "formidable": "^1.2.2",
+        "fs-extra": "^8.1.0",
+        "lightbox": "^0.5.0",
+        "lightbox2": "^2.11.1",
+        "moment": "^2.24.0",
+        "morgan": "^1.10.0",
+        "mysql": "^2.18.1",
+        "path": "^0.12.7",
+        "unidecode": "^0.1.8"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
